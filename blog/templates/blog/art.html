@@ -1,0 +1,5 @@
+{% block content %}
+ 	<h3>{{art.title}}</h3>
+	<h6> on {{art.date}}</h6>
+	{{art.body|safe|linebreaks}}
+{% endblock %}  

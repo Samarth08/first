@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title>Articles</title>
+<h1>
+ARTICLES
+</h1>
+<meta charset="utf-8" />
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type = "text/css"/>
+	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+	
+	<style type="text/css">
+		html,
+		body {
+		  height:100%
+		}
+	</style>
+
+</head>
+<a href='/Contribute/'>Contribute</a>
+<link rel="stylesheet" href="{% static 'css/article.css' %}">
+<body class="body" style="background-color:#000000">
+{% block content %}
+{{SignUp.id}}
+ 	{% for SignUp in object_list %}
+	 <h5><a href="/Articles/{{SignUp.id}}">{{SignUp.title}}</a></h5>
+		{{SignUp.body}}	
+{% endfor %}
+{% endblock %}  

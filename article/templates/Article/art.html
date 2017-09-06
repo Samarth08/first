@@ -1,0 +1,15 @@
+<html>
+<title>Artbody</title>
+<head>{{SignUp.title}}</head>
+{% block content %}
+ 
+<h6> onest</h6> 
+{% for SignUp in object_list %}
+	
+{{SignUp.timestamp}}
+
+	{{SignUp.body|safe|linebreaks}}
+
+{% endfor %}
+{% endblock %}
+</html>  
